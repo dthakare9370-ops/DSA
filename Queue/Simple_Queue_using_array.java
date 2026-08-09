@@ -1,4 +1,4 @@
-package Queue;
+
 import java.util.Scanner;
 
 class Simple_Queue_using_array{

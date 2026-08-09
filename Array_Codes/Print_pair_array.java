@@ -8,5 +8,6 @@ class Print_pair_array{
             }
             System.out.println();
         }
+        
     }
 }
