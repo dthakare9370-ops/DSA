@@ -7,7 +7,7 @@ public class String_Normal_array_hash {
         String str = "ganggta";
         
         int hash[] = new int[26];
-        // int hash[] = new int[256];  // ASCII american Standard code for information interchage 
+        // int hash[] = new int[256];  // ASCII american Standard code for information interchnage 
         for(int i=0;i<str.length();i++){
             hash[str.charAt(i)-'a']++;
         }
