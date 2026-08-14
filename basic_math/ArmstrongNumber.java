@@ -1,5 +1,4 @@
 package basic_math;
-import java.util.*;
 public class ArmstrongNumber {
     static public boolean isArmstrong(int n) {
         int no=n;

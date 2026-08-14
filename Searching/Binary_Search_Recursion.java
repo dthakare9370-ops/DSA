@@ -8,8 +8,8 @@ public class Binary_Search_Recursion {
         for(int i=0;i<arr.length;i++){
             System.out.print(arr[i]+" ");
         }
-        int index = binarySearch(arr,9);
-
+        // int index = binarySearch(arr,9);
+        int index = 0; 
         if(index>=0)
             System.out.println("\nElement Present at Index : "+index);
         else

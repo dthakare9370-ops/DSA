@@ -1,5 +1,5 @@
 package basic_math;
-import java.util.*;
+
 
 public class GCD_of_two_no {
     static public int GCD(int n1, int n2) {
