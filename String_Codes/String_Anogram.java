@@ -28,7 +28,7 @@ public class String_Anogram {
 
 
     //Using HashMap Approch Number 2 
-    public static boolean isAnagram(String str1,String str2){
+    static boolean isAnagram(String str1,String str2){
         
         if(str1.length() != str2.length()){
             return false;
