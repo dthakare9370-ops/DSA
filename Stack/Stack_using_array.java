@@ -1,6 +1,4 @@
 import java.util.*;
-
-
 class Stack_using_array{
     public static void main(String args[]){
         Scanner sc = new Scanner(System.in);
@@ -100,7 +98,6 @@ class Stack{
 
     boolean full(){
         return (top==size-1) ? true : false;
-    }
-    
+    } 
 }
 
