@@ -5,7 +5,7 @@ import java.util.*;
 public class Real_time_PriorityQueue {
     public static void main(String args[]){
         PriorityQueue<Patient> pq = new PriorityQueue<>(
-            (a,b) -> a.p -  b.p
+            (a,b) -> a.p +  b.p
             // (a,b) -> b.p -  a.p
         ); 
 

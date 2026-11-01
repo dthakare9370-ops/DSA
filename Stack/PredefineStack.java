@@ -1,4 +1,6 @@
 
+import java.util.*;
+
 public class PredefineStack {
     public static void main(String args[]){
         Stack<Integer> s = new Stack<>();
@@ -9,5 +11,16 @@ public class PredefineStack {
         s.push(40);
 
         System.out.println(s.peek());
+        System.out.println(s.empty());
+
+        System.out.println(s);
+        System.out.println(s.search(40));
+
+        System.out.println(s.size());
+
+        System.out.println(s.contains(10));
+
+        System.out.println(s.get(3));
+
     }
 }
