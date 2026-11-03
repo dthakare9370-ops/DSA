@@ -23,7 +23,7 @@ class Simple_Queue_using_array{
             ch = sc.nextInt();
             switch(ch){
                 case 1: 
-                    if(st.full()){
+                    if(st.isFull()){
                         System.out.println("Queue is Full");
                     }else{
                         System.out.println("Enter Data : ");
@@ -41,14 +41,14 @@ class Simple_Queue_using_array{
                     st.displayFront();
                     break;
                 case 5:
-                    if(st.empty()){
+                    if(st.isEmpty()){
                         System.out.println("Queue is Empty");
                     }else{
                         System.out.println("Queue is not empty ");
                     }
                     break;
                 case 6:
-                    if(st.full()){
+                    if(st.isFull()){
                         System.out.println("Queue is Full");
                     }else{
                         System.out.println("Queue is Empty");
@@ -66,62 +66,74 @@ class Simple_Queue_using_array{
 }
 
 class Queue{
+    int size ;
+    int arr[];
     int front,rear;
-    int size;
-    int queue[];
-    Queue(int size){
-        front=rear=-1;
+
+    public Queue(int size) {
         this.size = size;
-        queue = new int[size];
+        this.arr = new int[size];
+        front = rear = -1;
     }
 
-    void enqueue(int data){
-        if(full()){
-            System.out.println("Queue is Full");
+    public boolean isEmpty(){
+        return rear==-1;
+    }
+
+    public boolean isFull(){
+        return rear==size-1;
+    }
+
+    public void enqueue(int data){
+        if(rear==size-1){
+            System.out.println("Queue is Full !!");
             return;
-        }else if(rear == - 1){
-            front=rear=0;
+        }
+
+        if(rear==-1){
+            rear = front = 0;
         }else{
             rear++;
         }
-        queue[rear] = data;
-        System.out.println("Data Enqueue Successfully !!");
+
+        arr[rear] = data;
+        System.out.println("Data Insert Successfully !!");
+
     }
 
-    void dequeue(){
-        if(empty()){
+    public void dequeue(){
+        if(front == -1){
             System.out.println("Queue is Empty !!");
             return;
+        }
+
+        if(front==rear){
+            front=rear=-1;
         }else{
-            System.out.println("Dequeue Element : "+queue[front]);
-            if(front==rear)
-                front=rear=-1;
-            else
-                front++;
+            front++;
+        }
+        System.out.println("Delete Succ !!");
+    }
+
+    public void displayRear(){
+        if(rear==-1){
+            System.out.println("Queue is Empty !");
+            return;
+        }else{
+            System.out.println("Rear : " + arr[rear]);
+        }
+
+    }
+
+    public void displayFront(){
+        if(front==-1){
+            System.out.println("Queue is Empty !");
+            return;
+        }else{
+            System.out.println("Front : " + arr[front]);
         }
     }
 
-    void displayFront(){
-        if(empty()){
-            System.out.println("Queue is Empty");
-        }else{
-            System.out.println("Front : "+queue[front]);
-        }
-    }
 
-    void displayRear(){
-        if(empty()){
-            System.out.println("Queue is Empty");
-        }else{
-            System.out.println("Rear : "+queue[rear]);
-        }
-    }
-
-    boolean empty(){
-        return (front==-1) ? true : false ;
-    }
-
-    boolean full(){
-        return (rear==size-1) ? true : false ;
-    }
+    
 }
